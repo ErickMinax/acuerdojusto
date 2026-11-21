@@ -41,9 +41,9 @@ a {
   color: inherit;
 }
 .w {
-  max-width: 1160px;
+  max-width: 1240px;
   margin: auto;
-  padding: 0 28px;
+  padding: 0 18px;
 }
 :focus-visible {
   outline: 3px solid var(--or2);
@@ -140,7 +140,7 @@ a {
     radial-gradient(circle at 80% 30%, var(--blue), transparent 55%),
     linear-gradient(160deg, var(--navy), var(--navy2));
   color: #fff;
-  padding: 28px 0 96px;
+  padding: 32px 0 150px;
 }
 .hero .w {
   display: grid;
@@ -167,14 +167,14 @@ a {
   display: block;
 }
 .trust {
-  margin-top: -48px;
+  margin-top: -76px;
   position: relative;
   z-index: 2;
 }
 .trust ul {
   list-style: none;
   margin: 0;
-  padding: 22px 28px;
+  padding: 30px 36px;
   background: #fff;
   border-radius: 14px;
   box-shadow: var(--sh);
@@ -340,7 +340,7 @@ section {
 .about {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: 44px;
+  gap: 36px;
   align-items: center;
   margin-bottom: 36px;
 }
@@ -451,7 +451,7 @@ section {
 }
 details {
   border-top: 1px solid var(--bd);
-  padding: 12px 0;
+  padding: 20px 0;
 }
 details:last-of-type {
   border-bottom: 1px solid var(--bd);
@@ -480,7 +480,7 @@ details p {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 12px;
+  gap: 22px;
 }
 .info li {
   display: flex;
@@ -748,12 +748,14 @@ footer img {
   .trust ul,
   .grid3,
   .steps,
-  .vals,
   .team {
     grid-template-columns: 1fr;
   }
+  .vals {
+    grid-template-columns: 1fr 1fr;
+  }
   .w {
-    padding: 0 20px;
+    padding: 0 14px;
   }
   form {
     padding: 24px;
