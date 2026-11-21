@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action https://formspree.io; base-uri 'none'"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href="assets/logo-icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>INFORCOBRO | Carteras vencidas institucionales</title>
+    <meta
+      name="description"
+      content="Gestión de carteras vencidas institucionales en Ecuador, con diálogo, orden y respeto."
+    />
+  </head>
+  <body>
+    <svg class="sprite" aria-hidden="true">
+      <symbol id="i-bell" viewBox="0 0 24 24">
+        <path
+          d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 01-3.4 0"
+        />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path
+          d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"
+        />
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24">
+        <path
+          d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"
+        />
+        <circle cx="9" cy="7" r="4" />
+      </symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24">
+        <path d="M18 20V10M12 20V4M6 20v-6" />
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" />
+        <path d="M21 21l-4.3-4.3" />
+      </symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24">
+        <path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5" />
+      </symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24">
+        <rect x="3" y="11" width="18" height="11" rx="2" />
+        <path d="M7 11V7a5 5 0 0110 0v4" />
+      </symbol>
+      <symbol id="i-usercheck" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M17 11l2 2 4-4" />
+        <circle cx="9" cy="7" r="4" />
+      </symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" />
+        <circle cx="12" cy="12" r="3" />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4" />
+      </symbol>
+      <symbol id="i-file" viewBox="0 0 24 24">
+        <path
+          d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zM14 2v6h6M16 13H8M16 17H8M10 9H8"
+        />
+      </symbol>
+      <symbol id="i-filecheck" viewBox="0 0 24 24">
+        <path
+          d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zM14 2v6h6M9 15l2 2 4-4"
+        />
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path
+          d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 000-7.8z"
+        />
+      </symbol>
+      <symbol id="i-inbox" viewBox="0 0 24 24">
+        <path
+          d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"
+        />
+      </symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+      </symbol>
+      <symbol id="i-msg" viewBox="0 0 24 24">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <path
+          d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zM22 6l-10 7L2 6"
+        />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
+      </symbol>
+      <symbol id="i-scale" viewBox="0 0 24 24">
+        <path
+          d="M12 3v18M5 21h14M4 7h16M4 7l-2 7a3 3 0 006 0zM20 7l-2 7a3 3 0 006 0z"
+        />
+      </symbol>
+      <symbol id="i-ok" viewBox="0 0 24 24">
+        <path d="M22 11.1V12a10 10 0 11-5.9-9.1M22 4L12 14l-3-3" />
+      </symbol>
+    </svg>
+    <header class="top">
+      <div class="w nav">
+        <a href="index.html#inicio"
+          ><img src="assets/logo.svg" alt="INFORCOBRO"
+        /></a>
+        <ul>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#proceso">Proceso</a></li>
+          <li><a href="index.html#seguridad">Seguridad</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="index.html#faq">Preguntas</a></li>
+        </ul>
+        <a class="btn" href="index.html#contacto">Contáctanos</a>
+      </div>
+    </header>
+    <main id="inicio">
+      <div class="hero">
+        <div class="w">
+          <div>
+            <h1>Cobranza que cierra acuerdos, no conflictos</h1>
+            <p>
+              Gestionamos carteras vencidas institucionales con diálogo, orden
+              y respeto. Convertimos la mora en compromisos de pago sostenibles
+              para las personas y las instituciones.
+            </p>
+            <a class="btn" href="#contacto">Solicitar reunión</a
+            ><a class="btn ghost" href="#proceso">Cómo trabajamos</a>
+          </div>
+          <img
+            src="assets/hero.svg"
+            alt="Acuerdo de pago firmado, con indicador de cumplimiento y protección de datos"
+          />
+        </div>
+      </div>
+
+      <div class="w trust">
+        <ul>
+          <li>
+            <svg class="ic" aria-hidden="true"><use href="#i-lock" /></svg>
+            <div>
+              <b>Datos cifrados</b
+              ><span>Información protegida en todo momento</span>
+            </div>
+          </li>
+          <li>
+            <svg class="ic" aria-hidden="true"><use href="#i-shield" /></svg>
+            <div>
+              <b>Cumplimiento legal</b
+              ><span>Alineados a la LOPDP del Ecuador</span>
+            </div>
+          </li>
+          <li>
+            <svg class="ic" aria-hidden="true"><use href="#i-filecheck" /></svg>
+            <div>
+              <b>Trazabilidad total</b
+              ><span>Cada gestión queda registrada</span>
+            </div>
+          </li>
+          <li>
+            <svg class="ic" aria-hidden="true"><use href="#i-heart" /></svg>
+            <div>
+              <b>Trato digno</b><span>Respeto a las personas en cada contacto</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <section id="servicios">
+        <div class="w">
+          <h2>Servicios</h2>
+          <p class="sub">
+            Soluciones integrales para la gestión de carteras vencidas
+            institucionales.
+          </p>
+          <div class="grid3">
+            <div class="item">
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-bell" /></svg>
+              </div>
+              <h3>Cobranza preventiva</h3>
+              <p>
+                Contacto antes del vencimiento para frenar la mora temprana.
+              </p>
+            </div>
+            <div class="item">
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-phone" /></svg>
+              </div>
+              <h3>Cobranza administrativa</h3>
+              <p>
+                Gestión telefónica, escrita y presencial de cartera vencida con
+                trato digno.
+              </p>
+            </div>
+            <div class="item">
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-users" /></svg>
+              </div>
+              <h3>Negociación y refinanciamiento</h3>
+              <p>
+                Acuerdos realistas y documentados, alineados a las políticas de
+                la institución.
+              </p>
+            </div>
+            <div class="item">
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-chart" /></svg>
+              </div>
+              <h3>Reportes de gestión</h3>
+              <p>
+                Estado de cada cuenta y de cada compromiso, con trazabilidad
+                completa.
+              </p>
+            </div>
+            <div class="item">
+              <div class="tile">
+                <svg class="ic" aria-hidden="true">
+                  <use href="#i-search" />
+                </svg>
+              </div>
+              <h3>Actualización de contacto</h3>
+              <p>Localización de personas deudoras por medios lícitos.</p>
+            </div>
+            <div class="item">
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-cap" /></svg>
+              </div>
+              <h3>Capacitación</h3>
+              <p>Buenas prácticas de cobro y comunicación para tu personal.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proceso" class="alt">
+        <div class="w">
+          <h2>Cómo trabajamos</h2>
+          <p class="sub">
+            Cinco pasos claros, medibles y transparentes para la institución.
+          </p>
+          <div class="steps">
+            <div>
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-inbox" /></svg>
+              </div>
+              <h3>Recepción</h3>
+              <p>Convenio y entrega cifrada de la cartera.</p>
+            </div>
+            <div>
+              <div class="tile">
+                <svg class="ic" aria-hidden="true">
+                  <use href="#i-layers" />
+                </svg>
+              </div>
+              <h3>Segmentación</h3>
+              <p>Por mora, monto y perfil de la persona deudora.</p>
+            </div>
+            <div>
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-msg" /></svg>
+              </div>
+              <h3>Negociación</h3>
+              <p>Diálogo y propuesta viable.</p>
+            </div>
+            <div>
+              <div class="tile">
+                <svg class="ic" aria-hidden="true">
+                  <use href="#i-filecheck" />
+                </svg>
+              </div>
+              <h3>Formalización</h3>
+              <p>Compromiso documentado y seguimiento.</p>
+            </div>
+            <div>
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-chart" /></svg>
+              </div>
+              <h3>Reporte</h3>
+              <p>Resultados y rendición de cuentas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="seguridad" class="sec">
+        <div class="w">
+          <h2>Seguridad y confidencialidad</h2>
+          <p class="sub">
+            La información financiera de las personas es sensible y la tratamos
+            como tal.
+          </p>
+          <div class="grid3">
+            <div class="item">
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-lock" /></svg>
+              </div>
+              <h3>Cifrado</h3>
+              <p>Datos protegidos en tránsito y en reposo.</p>
+            </div>
+            <div class="item">
+              <div class="tile">
+                <svg class="ic" aria-hidden="true">
+                  <use href="#i-usercheck" />
+                </svg>
+              </div>
+              <h3>Acceso por roles</h3>
+              <p>
+                Cada gestor ve solo lo que necesita, con autenticación
+                reforzada.
+              </p>
+            </div>
+            <div class="item">
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-eye" /></svg>
+              </div>
+              <h3>Auditoría</h3>
+              <p>Registro de cada acceso y de cada gestión.</p>
+            </div>
+            <div class="item">
+              <div class="tile">
+                <svg class="ic" aria-hidden="true">
+                  <use href="#i-shield" />
+                </svg>
+              </div>
+              <h3>Protección de datos</h3>
+              <p>
+                Tratamiento conforme a la Ley Orgánica de Protección de Datos
+                Personales del Ecuador.
+              </p>
+            </div>
+            <div class="item">
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-file" /></svg>
+              </div>
+              <h3>Confidencialidad contractual</h3>
+              <p>Todo el equipo firma acuerdos de confidencialidad.</p>
+            </div>
+            <div class="item">
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-heart" /></svg>
+              </div>
+              <h3>Cobranza ética</h3>
+              <p>Sin amenazas, hostigamiento ni divulgación a terceros.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="nosotros">
+        <div class="w">
+          <div class="about">
+            <img
+              src="assets/about.svg"
+              alt="Dos asesores cerrando un acuerdo de pago"
+            />
+            <div>
+              <h2>Quiénes somos</h2>
+              <p>
+                INFORCOBRO nace en Ecuador para apoyar a las instituciones que
+                requieren una gestión responsable y profesional de sus carteras
+                vencidas.
+              </p>
+              <p>
+                Reunimos gestión profesional, tecnología y trato humano para
+                recuperar cartera sin dañar la confianza.
+              </p>
+              <div class="mv">
+                <div>
+                  <h3>Misión</h3>
+                  <p>
+                        Gestionar carteras vencidas institucionales mediante negociación responsable, tecnología y servicio, generando acuerdos de pago sostenibles que protejan la liquidez de las instituciones y la dignidad de las personas.
+                  </p>
+                </div>
+                <div>
+                  <h3>Visión</h3>
+                  <p>
+                    Ser una empresa referente en Ecuador en la gestión de carteras vencidas institucionales, reconocida por la ética, la trazabilidad y los resultados.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="vals">
+            <li>
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-heart" /></svg>
+              </div>
+              Respeto
+            </li>
+            <li>
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-eye" /></svg>
+              </div>
+              Transparencia
+            </li>
+            <li>
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-lock" /></svg>
+              </div>
+              Confidencialidad
+            </li>
+            <li>
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-ok" /></svg>
+              </div>
+              Compromiso
+            </li>
+            <li>
+              <div class="tile">
+                <svg class="ic" aria-hidden="true"><use href="#i-scale" /></svg>
+              </div>
+              Equidad
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="cta">
+        <div class="w">
+          <div>
+            <h2>Recupera cartera sin romper la relación con tus clientes</h2>
+            <p>
+              Agenda una reunión y te mostramos cómo trabajaríamos con tu
+              institución.
+            </p>
+          </div>
+          <a class="btn white" href="#contacto">Agendar reunión</a>
+        </div>
+      </div>
+
+      <section id="faq" class="alt">
+        <div class="w">
+          <h2>Preguntas frecuentes</h2>
+          <p class="sub">Lo que más nos preguntan las instituciones.</p>
+          <div class="faq">
+            <details>
+              <summary>¿Qué es la cobranza extrajudicial?</summary>
+              <p>
+                Es la recuperación de deudas sin juicio: mediante contacto,
+                negociación y acuerdos de pago.
+              </p>
+            </details>
+            <details>
+              <summary>¿Trabajan con instituciones pequeñas?</summary>
+              <p>
+                Sí. Adaptamos el servicio al tamaño y a las políticas de cada
+                institución.
+              </p>
+            </details>
+            <details>
+              <summary>¿Cómo se cobra el servicio?</summary>
+              <p>
+                Comisión por recuperación, tarifa fija u otro
+                esquema.
+              </p>
+            </details>
+            <details>
+              <summary>¿Cómo cuidan a la persona deudora?</summary>
+              <p>
+                Con un código de trato digno: horarios permitidos, lenguaje
+                respetuoso y privacidad de su información.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <div class="w">
+          <div class="contact">
+            <div>
+              <h2>Hablemos</h2>
+              <p class="sub">
+                Cuéntanos sobre tu institución y te contactamos.
+              </p>
+              <ul class="info">
+                <li>
+                  <div class="tile">
+                    <svg class="ic" aria-hidden="true">
+                      <use href="#i-mail" />
+                    </svg>
+                  </div>
+                  <div><b>Correo</b><span>inforcobro@gmail.com</span></div>
+                </li>
+                <li>
+                  <div class="tile">
+                    <svg class="ic" aria-hidden="true">
+                      <use href="#i-phone" />
+                    </svg>
+                  </div>
+                  <div><b>Teléfono</b><span>0995744572 · 0969420493 · 0939019275</span></div>
+                </li>
+                <li>
+                  <div class="tile">
+                    <svg class="ic" aria-hidden="true">
+                      <use href="#i-pin" />
+                    </svg>
+                  </div>
+                  <div><b>Oficina</b><span>José García y Los Héroes, Ambato, Tungurahua, Ecuador</span></div>
+                </li>
+                <li>
+                  <div class="tile">
+                    <svg class="ic" aria-hidden="true">
+                      <use href="#i-clock" />
+                    </svg>
+                  </div>
+                  <div>
+                    <b>WhatsApp</b><span>0995744572 · 0969420493 · 0939019275</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <form id="f" novalidate>
+              <input
+                class="hp"
+                name="web"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+              />
+              <input
+                id="n"
+                placeholder="Nombre y apellido"
+                maxlength="80"
+                required
+              /><input
+                id="o"
+                placeholder="Institución"
+                maxlength="100"
+                required
+              /><input
+                id="e"
+                type="email"
+                placeholder="Correo electrónico"
+                maxlength="100"
+                required
+              /><textarea
+                id="t"
+                rows="4"
+                placeholder="Mensaje"
+                maxlength="600"
+              ></textarea>
+              <label class="chk"
+                ><input type="checkbox" id="ok" name="ok" /> Acepto el
+                tratamiento de mis datos según la
+                <a href="privacidad.html">política de privacidad</a>.</label
+              >
+              <button class="btn" type="submit">Enviar solicitud</button>
+              <div id="msg" role="status"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="w">
+        <div class="fg">
+          <div>
+            <img src="assets/logo.svg" alt="INFORCOBRO" />
+            <p>
+              Gestión de carteras vencidas institucionales, con diálogo,
+              orden y respeto.
+            </p>
+          </div>
+          <div>
+            <h4>Navegación</h4>
+            <p><a href="index.html#servicios">Servicios</a></p>
+            <p><a href="index.html#proceso">Proceso</a></p>
+            <p><a href="index.html#nosotros">Nosotros</a></p>
+            <p><a href="privacidad.html">Política de privacidad</a></p>
+          </div>
+          <div>
+            <h4>Contacto</h4>
+            <p>inforcobro@gmail.com</p>
+            <p>0995744572 · 0969420493 · 0939019275</p>
+            <p>José García y Los Héroes, Ambato</p>
+            <p>RUC por definir</p>
+          </div>
+        </div>
+        <div class="copy">
+          © 2026 INFORCOBRO. Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+    <div id="bot">
+      <div id="bw">
+        <div class="bh">Asistente INFORCOBRO</div>
+        <div id="bm"></div>
+        <div id="bq"></div>
+        <form id="bf">
+          <input
+            id="bi"
+            placeholder="Escribe tu pregunta"
+            maxlength="120"
+            aria-label="Pregunta"
+          /><button type="submit">Enviar</button>
+        </form>
+      </div>
+      <button id="bt" type="button" aria-label="Abrir asistente">
+        <svg class="ic" aria-hidden="true"><use href="#i-msg" /></svg>
+      </button>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/bot.js"></script>
+  </body>
+</html>
