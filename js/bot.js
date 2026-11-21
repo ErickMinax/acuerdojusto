@@ -4,8 +4,8 @@
   "use strict";
   var KB = [
     {
-      k: ["quienes", "empresa", "somos", "acuerdojusto"],
-      r: "Somos AcuerdoJusto, una empresa ecuatoriana de cobranza extrajudicial para cooperativas. Buscamos acuerdos de pago justos para la institución y para el socio.",
+      k: ["quienes", "empresa", "somos", "inforcobro"],
+      r: "Somos INFORCOBRO, una empresa ecuatoriana especializada en la gestión de carteras vencidas institucionales. Buscamos acuerdos de pago sostenibles para la institución y para las personas.",
     },
     {
       k: ["servicio", "ofrecen", "hacen"],
@@ -13,7 +13,7 @@
     },
     {
       k: ["proceso", "funciona", "como trabajan", "pasos"],
-      r: "Recibimos la cartera, la segmentamos, contactamos y negociamos, formalizamos el acuerdo y entregamos reportes a la cooperativa.",
+      r: "Recibimos la cartera, la segmentamos, contactamos y negociamos, formalizamos el acuerdo y entregamos reportes a la institución.",
     },
     {
       k: ["seguridad", "datos", "confidencial", "privacidad"],
@@ -28,8 +28,8 @@
       r: "El esquema se define según la cartera de cada institución. Escríbenos por el formulario y te enviamos una propuesta.",
     },
     {
-      k: ["banco", "bancos"],
-      r: "Hoy trabajamos con cooperativas y estamos preparando nuestro servicio para entidades bancarias.",
+      k: ["banco", "bancos", "cooperativas", "instituciones"],
+      r: "Trabajamos con instituciones que administran carteras vencidas.",
     },
     {
       k: ["contacto", "telefono", "correo", "reunion", "escribir"],
@@ -108,7 +108,7 @@
     win.classList.toggle("open");
   });
   add(
-    "¡Hola! Soy el asistente informativo de AcuerdoJusto. ¿En qué te ayudo?",
+    "¡Hola! Soy el asistente informativo de INFORCOBRO. ¿En qué te ayudo?",
     "b",
   );
 })();
